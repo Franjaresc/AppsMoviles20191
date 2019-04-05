@@ -2,49 +2,21 @@ package co.edu.icesi.appsmoviles20191.Model;
 
 public class User {
 
-    private String name,password,phone,email,id;
+    private String id;
+    private String nombre;
+    private String telefono;
+    private String correo;
+    private String pass;
 
     public User() {
     }
 
-    public User(String name, String password, String phone, String email, String id) {
-        this.name = name;
-        this.password = password;
-        this.phone = phone;
-        this.email = email;
+    public User(String id, String nombre, String telefono, String correo, String pass) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.pass = pass;
     }
 
     public String getId() {
@@ -53,5 +25,37 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }

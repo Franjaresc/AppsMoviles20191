@@ -63,7 +63,7 @@ public class SingupActivity extends AppCompatActivity {
                                     correo,
                                     pass);
 
-                            rtdb.getReference().child("user").child(uid).setValue(usuario);
+                            rtdb.getReference().child("users").child(uid).setValue(usuario);
 
 
                             Intent i = new Intent(SingupActivity.this, MainActivity.class);
