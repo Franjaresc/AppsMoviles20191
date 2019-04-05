@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 import co.edu.icesi.appsmoviles20191.db.DBHandler;
 
@@ -21,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
     DBHandler localdb;
     private AdapterAmigos adapterAmigos;
     FirebaseAuth auth;
+    FirebaseDatabase rtdb;
     private Button btn_signout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         ActivityCompat.requestPermissions(this, new String[]{
                 Manifest.permission.CALL_PHONE,
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         localdb = DBHandler.getInstance(this);
         auth = FirebaseAuth.getInstance();
-
+        rtdb = FirebaseDatabase.getInstance();
 
         //Si no hay usuario loggeado
         if(auth.getCurrentUser() == null){
