@@ -1,5 +1,6 @@
 package co.edu.icesi.appsmoviles20191;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
 import co.edu.icesi.appsmoviles20191.Model.Amigo;
 
 public class AdapterAmigos extends RecyclerView.Adapter<AdapterAmigos.CustomViewHolder> {
@@ -42,13 +42,13 @@ public class AdapterAmigos extends RecyclerView.Adapter<AdapterAmigos.CustomView
     }
 
     @Override
-    public void onBindViewHolder(CustomViewHolder holder, int position) {
+    public void onBindViewHolder(CustomViewHolder holder, final int position) {
         ((TextView) holder.root.findViewById(R.id.renglon_amigo_nombre)).setText(data.get(position).getNombre());
         ((TextView) holder.root.findViewById(R.id.renglon_amigo_telefono)).setText(data.get(position).getTelefono());
         holder.root.findViewById(R.id.renglon_amigo_btn_call).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                listener.onItemClick(data.get(position));
             }
         });
     }
@@ -57,6 +57,19 @@ public class AdapterAmigos extends RecyclerView.Adapter<AdapterAmigos.CustomView
     public int getItemCount() {
         return data.size();
     }
+
+    //OBSERVER
+    public interface OnItemClickListener{
+        void onItemClick(Amigo amigo);
+    }
+
+    private OnItemClickListener listener;
+
+    public void setListener(OnItemClickListener listener){
+        this.listener = listener;
+    }
+
+
 
 
 }
