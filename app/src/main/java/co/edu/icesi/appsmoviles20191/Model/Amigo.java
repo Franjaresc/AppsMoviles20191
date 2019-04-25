@@ -2,17 +2,24 @@ package co.edu.icesi.appsmoviles20191.Model;
 
 public class Amigo {
 
-    private String id,nombre,telefono,email,edad;
+    private String id;
+    private String nombre;
+    private String edad;
+    private String telefono;
+    private String email;
+    private String userID;
 
+    //Serializar
     public Amigo() {
     }
 
-    public Amigo(String id, String nombre, String telefono, String email, String edad) {
+    public Amigo(String id, String nombre, String edad, String telefono, String email, String userID) {
         this.id = id;
         this.nombre = nombre;
+        this.edad = edad;
         this.telefono = telefono;
         this.email = email;
-        this.edad = edad;
+        this.userID = userID;
     }
 
     public String getId() {
@@ -31,6 +38,14 @@ public class Amigo {
         this.nombre = nombre;
     }
 
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
     public String getTelefono() {
         return telefono;
     }
@@ -47,13 +62,19 @@ public class Amigo {
         this.email = email;
     }
 
-    public String getEdad() {
-        return edad;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setEdad(String edad) {
-        this.edad = edad;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Amigo){
+            return this.id.equals(((Amigo) obj).id);
+        }
+        return false;
+    }
 }
