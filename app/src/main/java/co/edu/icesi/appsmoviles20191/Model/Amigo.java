@@ -1,5 +1,6 @@
 package co.edu.icesi.appsmoviles20191.Model;
 
+
 public class Amigo {
 
     private String id;

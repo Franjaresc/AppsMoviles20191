@@ -1,6 +1,7 @@
 package co.edu.icesi.appsmoviles20191;
 
 
+
 import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements AdapterAmigos.OnI
     private AdapterAmigos adapterAmigos;
     FirebaseAuth auth;
     private Button btn_signout;
+    private Button btn_feed;
 
     FirebaseDatabase rtdb;
 
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements AdapterAmigos.OnI
         lista_amigos.setLayoutManager(new LinearLayoutManager(this));
         lista_amigos.setAdapter(adapterAmigos);
         lista_amigos.setHasFixedSize(true);
-
+        btn_feed = findViewById(R.id.btn_feed);
 
 
         btn_agregar.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +93,13 @@ public class MainActivity extends AppCompatActivity implements AdapterAmigos.OnI
                 Intent i = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
+            }
+        });
+        btn_feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, FeedActivity.class);
+                startActivity(i);
             }
         });
     }

@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
 import co.edu.icesi.appsmoviles20191.Model.Amigo;
 
 public class AdapterAmigos extends RecyclerView.Adapter<AdapterAmigos.CustomViewHolder> {

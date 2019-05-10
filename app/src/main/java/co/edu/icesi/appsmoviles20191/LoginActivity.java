@@ -24,7 +24,6 @@ import com.google.firebase.database.ValueEventListener;
 import co.edu.icesi.appsmoviles20191.Model.Amigo;
 import co.edu.icesi.appsmoviles20191.db.DBHandler;
 
-
 public class LoginActivity extends AppCompatActivity {
 
     private EditText et_login_correo;
@@ -83,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(LoginActivity.this, "No se pudo ingresar", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "No se pudo ingresar" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 

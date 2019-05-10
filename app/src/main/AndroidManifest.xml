@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.edu.icesi.appsmoviles20191">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -24,19 +23,19 @@
         </activity>
         <activity android:name=".AgregarAmigoActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SingupActivity"></activity>
+        <activity android:name=".SingupActivity" />
+
         <provider
-            android:authorities="${applicationId}"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/providerpath"
-                ></meta-data>
-
+                android:resource="@xml/providerpath" />
         </provider>
 
+        <activity android:name=".FeedActivity"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package co.edu.icesi.appsmoviles20191.Model;
 
 public class User {
 
+
     private String id;
     private String nombre;
     private String telefono;

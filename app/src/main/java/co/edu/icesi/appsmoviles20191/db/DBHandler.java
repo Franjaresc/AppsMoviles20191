@@ -1,15 +1,12 @@
 package co.edu.icesi.appsmoviles20191.db;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
-
 import co.edu.icesi.appsmoviles20191.Model.Amigo;
-
-import android.util.Log;
 
 public class DBHandler extends SQLiteOpenHelper {
 

@@ -11,7 +11,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#ddd"
-        android:id="@+id/img_amigo"/>
+        android:id="@+id/image_amigo"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -22,8 +22,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abrir Galeria"
+        android:text="Abrir Galería"
         android:id="@+id/btn_open_gal"/>
+
 
 
     <EditText

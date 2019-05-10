@@ -32,4 +32,14 @@
         android:id="@+id/btn_signout"/>
 
 
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="O"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btn_feed"/>
+
+
 </RelativeLayout>
